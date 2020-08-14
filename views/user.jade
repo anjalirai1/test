@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    style.
+      table, th, td {
+      border: 1px solid black;
+      }
+  body
+    h3(style='text-align:center') Student Data
+    table(style='width:100%')
+      tr
+        th username
+      each user in data
+        tr
+         td #{user.name1}
+
+h3(style='text-align:center')
+      | Create Student Data
+      form(action='/create', method='POST', style='text-align: center;')
+        .form-group
+          label(for='fname') Name
+          input.form-contrl(type='text', placeholder='name', name='name')
+        button(type='Submit') Submit
+
+
